@@ -18,7 +18,7 @@ if [ "x${TEST}" = "x1" ]; then
   echo "Dummy packages" > "${OPENWRT_COMPILE_DIR}/bin/packages/packages.tar.gz"
   exit 0
 fi
-
+FORCE_UNSAFE_CONFIGURE=1
 compile() {
   (
     cd "${OPENWRT_CUR_DIR}"
